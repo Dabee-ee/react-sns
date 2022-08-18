@@ -39,7 +39,6 @@ function App() {
       ) : (
         "Initailizing..."
       )}
-      <footer> React SNS by Dabee</footer>
     </>
   );
 }

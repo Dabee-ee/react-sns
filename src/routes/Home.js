@@ -17,10 +17,11 @@ const Home = ({ userObj }) => {
   }, []);
 
   return (
-    <div>
+    <div className="container">
       <PostFactory userObj={userObj} />
+
       <span> Post List </span>
-      <div>
+      <div style={{ marginTop: 30 }}>
         {posts.map((post) => (
           <Post
             key={post.id}
