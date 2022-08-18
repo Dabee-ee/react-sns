@@ -1,4 +1,4 @@
-import { dbService } from "fbase";
+import { dbService, storageService } from "fbase";
 import React, { useState } from "react";
 
 const Post = ({ postObj, isOwner }) => {
@@ -9,6 +9,7 @@ const Post = ({ postObj, isOwner }) => {
     const ok = window.confirm("Are yuu sure you want to delete this post?");
     if (ok) {
       await dbService.doc(`posts/${postObj.id}`).delete();
+      await storageService.refFromURL(postObj.fileUrl).delete();
     }
   };
   const toggleEditing = () => {
@@ -54,6 +55,9 @@ const Post = ({ postObj, isOwner }) => {
       ) : (
         <>
           <h4>{postObj.text}</h4>
+          {postObj.fileUrl && (
+            <img src={postObj.fileUrl} width="300px" height="300px" />
+          )}
           {isOwner && (
             <>
               <button type="button" onClick={toggleEditing}>
