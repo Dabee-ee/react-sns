@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/react-sns/static/css/main.a749d3de.css",
+    "main.js": "/react-sns/static/js/main.03652c0a.js",
+    "index.html": "/react-sns/index.html",
+    "main.a749d3de.css.map": "/react-sns/static/css/main.a749d3de.css.map",
+    "main.03652c0a.js.map": "/react-sns/static/js/main.03652c0a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a749d3de.css",
+    "static/js/main.03652c0a.js"
+  ]
+}
